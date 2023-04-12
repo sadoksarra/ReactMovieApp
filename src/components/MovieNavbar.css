@@ -1,0 +1,21 @@
+.Searchbar{
+    position: fixed;
+    float: right;
+    top: 2%;
+    right: 40px;
+}
+
+.navbar-expand .navbar-nav {
+    display: inline-flex;
+    
+}
+
+
+
+/********* stars***********/
+.dv-star-rating.NavbarStar {
+    display: flex!important;
+    position: fixed!important;
+    right: 25%;
+    top: 2%;
+}

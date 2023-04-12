@@ -1,0 +1,24 @@
+.ShowButton {
+    position: fixed;
+    top: 2%;
+    right: 37%;
+}
+
+
+label.form-label.col-form-label.col-lg-2 {
+    color: red;
+}
+
+
+.btn-primary  {
+    position: fixed;
+    top: 2%;
+    right: 26%;
+    background: #E50914;
+    border: #E50914;
+}
+
+.col-form-label {
+ 
+    color: black!important;
+}
