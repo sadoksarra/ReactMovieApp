@@ -1,6 +1,7 @@
 import React from "react";
 import "./Card.css";
 import StarRatingComponent from 'react-star-rating-component';
+import { Link} from 'react-router-dom';
 
 const Moviecard = ({movie}) => {
 
@@ -13,7 +14,8 @@ const Moviecard = ({movie}) => {
     <div className="overlay__text Title">
       <h5>{movie.Title}</h5>
      <div className="Description">
-      <p>{movie.description}</p>
+      <p>{movie.description}    <Link to="/LearnMore">Learn More</Link></p>
+    
      </div> 
       
      <StarRatingComponent className="rating"
@@ -22,7 +24,7 @@ const Moviecard = ({movie}) => {
         editing={false} /* is component available for editing, default `true` */
       />
 
-      <a href="#" class="button">Watch Now</a>
+      <a href="#" className="button">Watch Now</a>
     </div>
   </div>
 </div>    
