@@ -13,9 +13,9 @@ const Moviecard = ({movie}) => {
   <div className="card__overlay">
     <div className="overlay__text Title">
       <h5>{movie.Title}</h5>
-     <div className="Description">
-      <p>{movie.description}    <Link to="/LearnMore">Learn More</Link></p>
-    
+     <div className="Description"> 
+      <div>{movie.description}    <Link to={`/learnmore/${movie.id}`}>learnmore</Link>
+     </div>
      </div> 
       
      <StarRatingComponent className="rating"
@@ -27,7 +27,8 @@ const Moviecard = ({movie}) => {
       <a href="#" className="button">Watch Now</a>
     </div>
   </div>
-</div>    
+</div> 
+  
   );
 
 }

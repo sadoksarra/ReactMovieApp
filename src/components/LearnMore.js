@@ -1,26 +1,33 @@
 import React from 'react';
-import {useNavigate} from 'react-router-dom';
+import {useNavigate, useParams} from 'react-router-dom';
 
-const LearnMore = (props) => {
+const LearnMore = ({movies}) => {
+
+
 const navigate = useNavigate();
 
 	const goBack = () => {
 		navigate(-1);
 	}
-   
+const params = useParams();
+   console.log(params);
+  
+const mymovie = movies.find(el => el.id == params.id)  
+   console.log(mymovie);
+
 	return (
 		<>
 
-		{props.movies.map((movie,key) => ( 
+	
 
 		<div className='container'  >     
 		 <article className="film_details">
 			<section className="main_details">
 			  <div  className="main_description">
-				<p key={movie.id}>{movie.description}</p>
+				<p key={mymovie.id}>{mymovie.description}</p>
 			  </div>	
 			  <div  className="main_trailer">
-				<p>{movie.trailer}</p>
+				<p>{mymovie.trailer}</p>
 			  </div>	
 				<footer>
 					<p>
@@ -36,7 +43,7 @@ const navigate = useNavigate();
 	
 				 
 			  
-		))}
+		)
 	
 		
 		</>

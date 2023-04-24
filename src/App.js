@@ -52,12 +52,12 @@ const App = () => {
     <AddMovie  addNewMovie={addNewMovie}></AddMovie>
 
       <Routes>
-       <Route path="/home"
+       <Route path="/"
         element={<div className='container-fluid movie-app'>
           <div className='row'>
               <Movielist movies = {movies.filter(elm => elm.Title.toLowerCase().includes(keyword.toLowerCase().trim()) && elm.rate>= rating)}></Movielist>
           </div></div>} /> 
-        <Route path="/LearnMore" element={<LearnMore movies={movies} />} />
+        <Route path="/learnmore/:id" element={<LearnMore movies={movies} />} />
         <Route path="/moviecard" element={<Moviecard />} />
       </Routes>
     
